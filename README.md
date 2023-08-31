@@ -1,81 +1,59 @@
-# 15-445/645 C++ Bootcamp
-This bootcamp aims to provide a basic introduction to coding in modern C++. 
-The features of the C++ language are too vast and expansive to cover in one
-bootcamp, and quite frankly, it is learned best through experience. The staff
-is certain that 15-445 will make you a more confident C++ programmer! 
-However, we do cover some C++ topics that are necessary to know while doing
-the programming assignments. This tutorial does not cover basic C/C++ syntax.
-It mainly covers C++ programming features, particularly concepts that do not exist in C.
+# 15-445/645 C++ 训练营
+这个编程训练营旨在为现代C++编程提供基本入门。C++语言的特性非常广泛和深远，无法在一个训练营中全面涵盖，而且坦白地说，最好通过实际经验来学习。工作人员确信，参加15-445课程将使您成为更自信的C++程序员！然而，在完成编程作业时，我们确实会涵盖一些必须了解的C++主题。本教程不涵盖基本的C/C++语法，主要关注C++编程特性，特别是那些在C语言中不存在的概念。
 
-This is the first iteration of the C++ bootcamp for 15-445/645, and feedback
-is appreciated!
+这是15-445/645课程的C++编程训练营的第一版，欢迎提供反馈！
 
 ## Format
-The bootcamp consists of C++ code files, located in `src/`, that are meant
-to be read in depth. Each of these files can be compiled into an executable
-with the same name. Use CMake to build these executables. This set of commands
-should build all the executables. After running these commands, these executables
-should be located in the `build` directory.
+这个训练营包括位于`src/`目录中的C++代码文件，旨在深入阅读。每个文件都可以编译成同名的可执行文件。请使用CMake来构建这些可执行文件。以下一组命令可以构建所有的可执行文件。在运行这些命令之后，这些可执行文件应该会位于`build`目录中。
 ```console
 $ mkdir build
 $ cd build
 $ cmake ..
 $ make -j8
 ```
-For instance, the `src/references.cpp` file compiles into the `references`
-executable, located in `./build`. The same holds for every file in the source
-directory.
+例如，`src/references.cpp`文件会编译成名为`references`的可执行文件，位于`./build`目录中。对于源目录中的每个文件也是如此。
 
-## Files
-There are fifteen files in the `src/` directory, each which cover different
-concepts. They are meant to be read in the order below, since each file 
-builds up on the previous one. However, if you know some modern C++ concepts
-and are looking to refresh your knowledge, it is probably okay to start by
-reading the files on concepts you are unfamiliar about.
+## 文件
+`src/`目录中有十五个文件，每个文件涵盖不同的概念。它们应该按照以下顺序阅读，因为每个文件都是在前一个文件的基础上构建的。然而，如果您了解一些现代C++的概念，并且想要刷新您的知识，从阅读您不熟悉的概念文件开始可能是可以的。
 
-### References and Move Semantics
-- `references.cpp`: Covers C++ references.
-- `move_semantics.cpp`: Covers C++ move semantics.
-- `move_constructors.cpp`: Covers C++ class move constructors and move assignment operators.
+### 引用和移动语义
+- `references.cpp`：介绍了C++引用的概念。
+- `move_semantics.cpp`：介绍了C++移动语义的概念。
+- `move_constructors.cpp`：介绍了C++类的移动构造函数和移动赋值运算符的概念。
 
-### C++ Templates
-- `templated_functions.cpp`: Covers C++ templated functions.
-- `templated_classes.cpp` Covers C++ templated classes.
+### C++ 模版
+- `templated_functions.cpp`：介绍了C++模板函数的概念。
+- `templated_classes.cpp`：介绍了C++模板类的概念。
 
-### Misc
-- `wrapper_class.cpp`: Covers C++ wrapper classes.
-- `iterator.cpp`: Covers implementing a basic C++ style iterator.
-- `namespaces.cpp`: Covers C++ namespaces.
+### 杂类
+- `wrapper_class.cpp`：介绍了C++封装类的概念。
+- `iterator.cpp`：介绍了实现基本C++风格迭代器的概念。
+- `namespaces.cpp`：介绍了C++命名空间的概念。
 
-### C++ Standard Library (STL) Containers
-- `vectors.cpp`: Covers `std::vector`.
-- `set.cpp`: Covers `std::set`.
-- `unordered_map.cpp`: Covers `std::unordered_map`.
-- `auto.cpp`: Covers the usage of the C++ keyword `auto`, including using `auto` to iterate through C++ STL containers.
+### C++标准库（STL）容器
+- `vectors.cpp`：介绍了`std::vector`。
+- `set.cpp`：介绍了`std::set`。
+- `unordered_map.cpp`：介绍了`std::unordered_map`。
+- `auto.cpp`：介绍了C++关键字`auto`的用法，包括在C++ STL容器中使用`auto`进行迭代。
 
-### C++ Standard Library (STL) Memory
-- `unique_ptr.cpp`: Covers `std::unique_ptr`.
-- `shared_ptr.cpp`: Covers `std::shared_ptr`.
+### C++标准库（STL）内存
+- `unique_ptr.cpp`：介绍了`std::unique_ptr`。
+- `shared_ptr.cpp`：介绍了`std::shared_ptr`。
 
-### C++ Standard Library (STL) Synch Primitives
-- `mutex.cpp`: Covers `std::mutex`.
-- `scoped_lock.cpp`: Covers `std::scoped_lock`.
-- `condition_variable.cpp`: Covers `std::condition_variable`.
-- `rwlock.cpp`: Covers the usage of several C++ STL synchronization primitive libraries (`std::shared_mutex`, `std::shared_lock`, `std::unique_lock`) to create a reader-writer's lock implementation. 
+### C++标准库（STL）同步原语
+- `mutex.cpp`：介绍了`std::mutex`。
+- `scoped_lock.cpp`：介绍了`std::scoped_lock`。
+- `condition_variable.cpp`：介绍了`std::condition_variable`。
+- `rwlock.cpp`：介绍了使用多个C++ STL同步原语库（`std::shared_mutex`，`std::shared_lock`，`std::unique_lock`）来创建读写锁实现。
 
-## Other Resources
-There are many other resources that will be helpful while you get accquainted to C++.
-I list a few here!
-- [https://en.cppreference.com/w/](https://en.cppreference.com/w/): This is the official C++ documentation.
-- [https://cplusplus.com/](https://cplusplus.com/): Contains both a C++ language [tutorial](https://cplusplus.com/doc/tutorial/) and a C++ library [reference](https://cplusplus.com/reference/).
-- [Modern C++ Tutorial](https://github.com/changkun/modern-cpp-tutorial). This GitHub repo contains
-some information and exercises that are useful!
+## 其他资源
+在熟悉C++的过程中，还有许多其他有用的资源。我在这里列出了一些！
+- [https://en.cppreference.com/w/](https://en.cppreference.com/w/)：这是官方的C++文档。
+- [https://cplusplus.com/](https://cplusplus.com/)：包含C++语言[教程](https://cplusplus.com/doc/tutorial/)和C++库[参考](https://cplusplus.com/reference/)。
+- [现代C++教程](https://github.com/changkun/modern-cpp-tutorial)。这个GitHub存储库包含了一些有用的信息和练习！
 
-## Appendix: Official C++ Documentation for Topics Covered in the Bootcamp
-This documentation may be useful to you! It's very comprehensive (much more comprehensive than this
-bootcamp) but it may lack some readability. Overall, I think it's still a good idea to try to read
-and understand this documentation, especially when working on the projects. Although the bootcamp
-tries to be as comprehensive as possible, it still only covers the bare bones of using modern C++.
+## 附录：官方C++文档（涵盖训练营中的主题）
+这些文档可能对您有用！它非常全面（比这个训练营更全面），但可读性可能不如此训练营。总的来说，我认为在项目上工作时，阅读和理解这些文档仍然是一个好主意。尽管训练营尽可能全面，但仍然只涵盖了使用现代C++的基础知识。
 
 - [References](https://en.cppreference.com/w/cpp/language/reference)
 - [std::move](https://en.cppreference.com/w/cpp/utility/move)
